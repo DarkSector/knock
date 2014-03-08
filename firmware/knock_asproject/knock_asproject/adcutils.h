@@ -43,4 +43,17 @@ typedef enum {
 	ADC_ADJ_LEFT = 0
 } adc_adj_t;
 
+void adc_init(adc_ref_t ref, adc_ps_t ps, adc_adj_t adj){
+	ADCSRA = ref|ps|adj;
+}
+
+void adc_enable(void){
+	ADCSRA |= (1<<ADEN);
+}
+
+void adc_disable(void){
+	ADCSRA &= (~(1<<ADEN));
+}
+
+
 #endif
