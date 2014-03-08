@@ -4,6 +4,11 @@
 
 #include <avr/io.h>
 
+void adc_init(adc_ref_t ref, adc_ps_t ps, adc_adj_t adj);
+void adc_chan_select(adc_chan_t chan);
+void adc_enable(void);
+void adc_disable(void);
+
 typedef enum {
 	ADC_AREF_INTERNAL = ((0<<REFS1)|(0<<REFS0)),
 	ADC_AVCC_INT_CAP = ((0<<REFS1)|(1<<REFS0)),
