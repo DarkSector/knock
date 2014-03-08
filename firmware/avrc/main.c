@@ -2,7 +2,7 @@
 
 #include <avr/io.h>
 #include "customutils.h"
-#include "serialutils.h"
+// #include "serialutils.h"
 #include "adcutils.h"
 
 int main(void){
