@@ -2,3 +2,4 @@ venv
 *.pyc
 firmware/knock_asproject/knock_asproject/Debug/
 .idea/*
+firmware/knock_asproject/knock_asproject.atsuo
