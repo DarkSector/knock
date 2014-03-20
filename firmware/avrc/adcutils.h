@@ -14,9 +14,9 @@ void adc_conversion_start(void);
 
 typedef enum {
 	ADC_AREF_INTERNAL = ((0<<REFS1)|(0<<REFS0)),
-	ADC_AVCC_INT_CAP = ((0<<REFS1)|(1<<REFS0)),
+	ADC_AREF_EXT_CAP = ((0<<REFS1)|(1<<REFS0))
 	ADC_RESERVED = ((1<<REFS1)|(0<<REFS0)),
-	ADC_VREF_EXT_CAP = ((1<<REFS1)|(1<<REFS0))
+	ADC_INT_VREF = ((1<<REFS1)|(1<<REFS0)),
 } adc_ref_t;
 
 typedef enum {

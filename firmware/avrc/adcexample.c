@@ -62,7 +62,7 @@ void adc_init(void)
 	/** Setup and enable ADC **/
 	ADMUX = (0<<REFS1)|	// Reference Selection Bits
 			(1<<REFS0)|		// AVcc - external cap at AREF
-			(0<<ADLAR)|		// ADC Left Adjust Result
+			(0<<ADLAR)|		// ADC Right Adjust Result
 			(0<<MUX3)|
 			(0<<MUX2)|		// ANalog Channel Selection Bits
 			(0<<MUX1)|		// ADC2 (PC2 PIN25)
