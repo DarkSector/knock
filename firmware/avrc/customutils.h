@@ -6,7 +6,7 @@
 #define LED_PORT_PIN PORTB0
 
 #include <avr/io.h>
-#include <utils/delay.h>
+#include <util/delay.h>
 
 // Prototype
 void delay_ms(unsigned int delay);

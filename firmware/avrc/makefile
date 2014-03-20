@@ -1,10 +1,10 @@
 #NOTE: This file changes the fuse values of the chip to enable brown-out detection.
 #fuse settings are hard-coded into the bottom lines; change them only with care.
 
-PRG            = main
+PRG            = adcexample
 OBJ            = $(PRG).o
 MCU_TARGET     = atmega88a
-PROGRAMMER     = avrispmkII#usbtiny
+PROGRAMMER     = avrispmkII
 AVRDUDE_TARGET = m88 
 PORT		   = usb
 
