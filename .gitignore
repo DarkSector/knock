@@ -3,3 +3,10 @@ venv
 firmware/knock_asproject/knock_asproject/Debug/
 .idea/*
 firmware/knock_asproject/knock_asproject.atsuo
+*.d
+*.eep
+*.elf
+*.hex
+*.lss
+*.map
+*.o

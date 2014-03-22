@@ -76,15 +76,19 @@ void adc_conversion_start(void){
 	ADCSRA |= (1<<ADSC);
 }
 
+void adc_conversion_stop(void){
+	ADCSRA &= ~(1<<ADSC);
+}
+
 
 unsigned int adc_read(void)
 {	
+	//adc_conversion_stop();
+	//adc_chan_select(chan);
 	adc_conversion_start();
-	// while(ADCSRA & (1<<ADSC));
 	while(adc_converion_ongoing);
-	delay_ms(50);	
+	delay_ms(50);
 	return ADC;
-
 }
 
 #endif /* ADCUTILS_H */
