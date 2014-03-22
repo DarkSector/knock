@@ -10,6 +10,4 @@ firmware/knock_asproject/knock_asproject.atsuo
 *.lss
 *.map
 *.o
-firmware/atmelstudio/knocksolution/knocksolution/Debug/Makefile
-firmware/atmelstudio/knocksolution/knocksolution/Debug/knocksolution.srec
-firmware/atmelstudio/knocksolution/knocksolution/Debug/makedep.mk
+firmware/atmelstudio/knocksolution/knocksolution/Debug/*
