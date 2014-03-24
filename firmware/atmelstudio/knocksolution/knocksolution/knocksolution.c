@@ -32,6 +32,7 @@ int main(void)
 	blink_led(400, 3);
 	USART_Init(UBBR);
 	USART_tx_string("Connected!\n");
+	//sei();
     while(1)
     {
 		
@@ -51,13 +52,13 @@ int main(void)
 			// Implies ambient light is ON
 			led_off();
 		}
-		snprintf(ldr_outs,sizeof(ldr_outs),"%3d -", ldr_data);  // print ldr data		
+		snprintf(ldr_outs,sizeof(ldr_outs),"LDR:%3d\r\n", ldr_data);  // print ldr data		
 		USART_tx_string(ldr_outs);
 			
 		adc_chan_select(PIEZO);
 		piezo_data = adc_read();
 		
-		snprintf(piezo_outs,sizeof(piezo_outs),"%3d\n", piezo_data);  // print piezo data		
+		snprintf(piezo_outs,sizeof(piezo_outs),"PIEZO:%3d\r\n", piezo_data);  // print piezo data		
 		USART_tx_string(piezo_outs);
     }
 }
