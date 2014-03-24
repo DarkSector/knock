@@ -61,6 +61,7 @@ void adc_init(adc_ref_t ref, adc_ps_t ps, adc_adj_t adj){
 }
 
 void adc_chan_select(adc_chan_t chan){
+	ADMUX &= 0xE0;
 	ADMUX |= chan;
 }
 
