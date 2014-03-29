@@ -1,7 +1,9 @@
 import os
 import serial
-from flask import Flask, jsonify
-from __init__ import KNOCK_PORT, BAUD_RATE
+from flask import Flask, jsonify, request
+KNOCK_PORT = '/dev/ttyUSB0'
+BAUD_RATE = 19200
+#from __init__ import KNOCK_PORT, BAUD_RATE
 
 app = Flask(__name__)
 
@@ -13,7 +15,7 @@ def webstatus():
 
 @app.route('/knocker', requests=['POST'])
 def knocker():
-	if request.method == 'POST':		
+	if request.method == 'POST':
 		ser = serial.Serial()
 		ser.port = KNOCK_PORT
 		ser.baudrate = BAUD_RATE
