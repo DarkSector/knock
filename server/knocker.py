@@ -1,6 +1,6 @@
 import os
 import serial
-from flask import Flask, jsonify, request
+from flask import Flask, jsonify
 from __init__ import KNOCK_PORT, BAUD_RATE
 
 app = Flask(__name__)
