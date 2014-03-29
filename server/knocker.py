@@ -38,6 +38,6 @@ def knocker():
 
 
 if __name__ == '__main__':
-	server_host = 0.0.0.0
+	server_host = '0.0.0.0'
 	port_number = 60000
 	app.run(host=server_host, port=port_number)
