@@ -38,27 +38,36 @@ int main(void)
 		
 		ldr_data = 0;
 		piezo_data = 0;
-		adc_chan_select(LDR_SENSOR);
-		ldr_data = adc_read();
+		// adc_chan_select(LDR_SENSOR);
+		// ldr_data = adc_read();
 		//delay_ms(25);
 		
 
 		
-		if(ldr_data <= 100){
-			// Implies ambient light is off
-			led_on();			
-		}
-		else{
-			// Implies ambient light is ON
-			led_off();
-		}
-		snprintf(ldr_outs,sizeof(ldr_outs),"LDR:%3d\r\n", ldr_data);  // print ldr data		
-		USART_tx_string(ldr_outs);
+		// if(ldr_data <= 100){
+		// 	// Implies ambient light is off
+		// 	led_on();			
+		// }
+		// else{
+		// 	// Implies ambient light is ON
+		// 	led_off();
+		// }
+		// snprintf(ldr_outs,sizeof(ldr_outs),"LDR:%d\r\n", ldr_data);  // print ldr data		
+		// USART_tx_string(ldr_outs);
+
+		delay_ms(50);
 			
 		adc_chan_select(PIEZO);
 		piezo_data = adc_read();
-		
-		snprintf(piezo_outs,sizeof(piezo_outs),"PIEZO:%3d\r\n", piezo_data);  // print piezo data		
+
+		if(piezo_data > 2){
+			led_on();
+			delay_ms(50);
+		}
+		else{
+			led_off();
+		}
+		snprintf(piezo_outs,sizeof(piezo_outs),"PIEZO:%d\r\n", piezo_data);  // print piezo data		
 		USART_tx_string(piezo_outs);
     }
 }
