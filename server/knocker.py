@@ -13,7 +13,7 @@ def webstatus():
 	return "Knock work"
 
 
-@app.route('/knocker', requests=['POST'])
+@app.route('/knocker', method=['POST'])
 def knocker():
 	if request.method == 'POST':
 		ser = serial.Serial()
